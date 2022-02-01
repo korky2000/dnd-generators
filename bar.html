@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Tavern Name Generator</title>
+    <link rel="stylesheet" href="elf.css">
+    <style>
+        body {
+            background-color: #8B85C1;
+        }
+
+        #heading {
+            background-color: #FEC0AA;
+            color: #1E1E24;
+            padding: 30px 30px;
+            text-align: center;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+
+
+
+        a {
+            /*padding: 20px;
+    color: white;
+    border: 10px #7A6F9B solid;
+    padding: 15px;
+    background-color: #FEC0AA;*/
+            text-decoration: none;
+        }
+
+            a:visited {
+                color: black;
+            }
+
+        .button:hover {
+            padding: 20px;
+            color: #FEC0AA;
+            border: 10px #FEC0AA solid;
+            padding: 15px;
+            padding-right: 100px;
+            padding-left: 100px;
+            background-color: #8B85C1;
+        }
+
+        #links {
+            padding: 20px;
+            text-align: center;
+            align-content: center;
+            float: left;
+        }
+
+        nav {
+            text-decoration: none;
+            padding: 15px;
+            display: block;
+            float: left;
+            padding: 15px;
+        }
+
+        .button {
+            padding: 20px;
+            color: white;
+            border: 10px #7A6F9B solid;
+            padding: 15px;
+            padding-right: 100px;
+            padding-left: 100px;
+            background-color: #FEC0AA;
+            border-radius: 10%;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        .container {
+            height: 200px;
+            position: relative;
+        }
+
+        .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .screen {
+            background-color: #7A6F9B;
+            color: #1E1E24;
+            text-align: center;
+            margin-top:30px;
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="heading">
+
+        <h1>tavern name generator</h1>
+        <h3><a href="http://10.16.4.84/~kalista">home</a></h3>
+    </div>
+    <div class="screen">
+        <h2 id="random_name"></h2>
+        <input id="clickMe" type="button" value="Generate Random Name" onclick="generateName();" />
+    </div>
+    <div class="screen">
+        <h4 id="random_drink"></h4>
+        <h4 id="random_food"></h4>
+         <h4 id="random_drink"></h4>
+        <h4 id="random_food"></h4>
+         <h4 id="random_drink"></h4>
+        <h4 id="random_food"></h4>
+
+
+        <input id="clickMe" type="button" value="Generate Random Looks" onclick="generateEye();" />
+    </div>
+    <script>function capFirst(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        function generateName() {
+            var syl1 = ["magic","drunken","tired","angry","small","big","sad","tragic","hungry","greedy","noble","poor","happy","lazy","loud","cunning","crafty","cool","brass","silver"];
+            var syl2 = ["hammer","wolf","dog","pig","rooster","fool","king","horse","lobster","ghoul","ghost","goblin","parrot","thief","snake","hero","crab","wizard","bard","cat"];;
+            var name = "The " + capFirst(syl1[getRandomInt(0, syl1.length + 1)]) + " " +capFirst(syl2[getRandomInt(0, syl2.length + 1)]) ;
+            document.getElementById("random_name").innerHTML = name;
+        }
+        function generateEye() {
+            var eye = ["mead","ale","rum","stout","whiskey","vodka","sour","lager"];
+            var name = (eye[getRandomInt(0, eye.length + 1)]);
+            document.getElementById("random_drink").innerHTML = name;
+
+            var hair = ["stew","soup","mutton","salad","seafood","potato","beef","chicken"];
+            var nameHair = (hair[getRandomInt(0, hair.length + 1)]);
+            document.getElementById("random_food").innerHTML = nameHair;
+
+            var heightft = ["5","6","7"];
+            var heightin = ["1","2","3","4","5","6","7","8","9","10","11"];
+            var nameHeight = (heightft[getRandomInt(0, heightft.length + 1)]) +"'"+(heightin[getRandomInt(0, heightin.length + 1)]);
+            document.getElementById("random_tall").innerHTML = nameHeight;
+        }
+       
+    </script>
+</body>
+</html>
