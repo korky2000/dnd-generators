@@ -126,21 +126,21 @@
             var syl3 = ["van", "ren", "tor", "al", "en", "dor", "in", "ra", "tra", "na", "an", "ros", "ur", "in", "ir", "kas", "im", "ar", "or", "al"];
             var last1 = ["dusk", "light", "silver", "gold", "dark", "night", "green", "brown", "lunar", "mind", "fir", "oak", "blue", "fog", "winter", "summer", "autumn", "spring", "wild", "star"];
             var last2 = ["brook", "pride", "seeker", "weild", "ann", "ill", "bell", "dream", "burth", "walker", "whisper", "bloom", "blossom", "shard", "guard", "rint", "ant", "petal", "fate", "heel"];
-            var name = capFirst(syl1[getRandomInt(0, syl1.length + 1)]) + (syl2[getRandomInt(0, syl2.length + 1)]) + (syl3[getRandomInt(0, syl3.length + 1)]) + " " + capFirst(last1[getRandomInt(0, last1.length + 1)]) + (last2[getRandomInt(0, last2.length + 1)]);
+            var name = capFirst(syl1[getRandomInt(0, syl1.length )]) + (syl2[getRandomInt(0, syl2.length )]) + (syl3[getRandomInt(0, syl3.length )]) + " " + capFirst(last1[getRandomInt(0, last1.length )]) + (last2[getRandomInt(0, last2.length )]);
             document.getElementById("random_name").innerHTML = name;
         }
         function generateEye() {
             var eye = ["blue eyes", "brown eyes", "hazel eyes", "silver eyes", "green eyes", "black eyes", "red eyes"];
-            var name = (eye[getRandomInt(0, eye.length + 1)]);
+            var name = (eye[getRandomInt(0, eye.length )]);
             document.getElementById("random_eye").innerHTML = name;
 
             var hair = ["dark brown","light brown","strawberry blonde","dirty blonde","platinum blonde","black","red"];
-            var nameHair = (hair[getRandomInt(0, hair.length + 1)]) +" "+"hair";
+            var nameHair = (hair[getRandomInt(0, hair.length )]) +" "+"hair";
             document.getElementById("random_hair").innerHTML = nameHair;
 
             var heightft = ["5","6","7"];
             var heightin = ["1","2","3","4","5","6","7","8","9","10","11"];
-            var nameHeight = (heightft[getRandomInt(0, heightft.length + 1)]) +"'"+(heightin[getRandomInt(0, heightin.length + 1)]);
+            var nameHeight = (heightft[getRandomInt(0, heightft.length )]) +"'"+(heightin[getRandomInt(0, heightin.length )]);
             document.getElementById("random_tall").innerHTML = nameHeight;
         }
        
